@@ -1,88 +1,113 @@
 <!DOCTYPE html>
-<html lang="am">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ቮክስቪታ VoxVita | የጤና መረጃ በአማርኛ</title>
-    <link rel="stylesheet" href="style.css"> 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="VoxVita - Empowering Better Health Through Knowledge">
+    <title>VoxVita</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.png">
 </head>
-<body data-theme="light">
-    <header class="main-header">
-        <div class="container">
-            <h1 class="logo">VoxVita ጤና</h1>
-            <nav class="main-nav">
-                <a href="#articles">አዳዲስ ጽሑፎች</a>
-                <a href="#about">ስለ እኛ</a>
-                <a href="#contact">ያግኙን</a>
-            </nav>
-            <div class="header-actions">
-                <button id="theme-toggle" class="btn btn-secondary">🌗 ጨለማ ገጽ</button>
-                <button id="lang-toggle" class="btn btn-secondary">English</button>
-            </div>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="container header-container">
+        <div class="logo">
+            <img src="images/logo.png" alt="VoxVita Logo">
+            <span>VoxVita</span>
         </div>
-    </header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#blogs">Health Blogs</a></li>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="langToggle">አማርኛ</button></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <section class="hero-section">
-        <div class="container">
-            <div class="hero-content">
-                <img src="https://images.unsplash.com/photo-1550831107-1555d4c88219?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTl8fGJsYWNrJTIwZG9jdG9yJTIwd2hpdGUlMjBjb2F0fGVufDB8fHx8MTcwMTg4MTEyM3ww&ixlib=rb-4.0.3&q=80&w=400" 
-                     alt="Ethiopian Doctor in White Coat" class="hero-image">
-                <h2>ለኢትዮጵያ ህዝብ የሚሆን አስተማማኝ የጤና መረጃ</h2>
-                <p>ከባለሙያ ዶክተር የተሰጠ ትክክለኛ የጤና እውቀት። አዲስ መረጃዎችን ለማግኘት ሰብስክራይብ ያድርጉ።</p>
-            </div>
-            <div class="video-container">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                    title="VoxVita Latest Video Placeholder" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-                </div>
+<!-- HERO SECTION -->
+<section id="home" class="hero">
+    <div class="hero-text">
+        <h1>Empowering Better Health Through Knowledge</h1>
+        <p>Explore expert health tips, articles, and videos to improve your life.</p>
+        <a href="#blogs" class="btn">Read Blogs</a>
+        <a href="#videos" class="btn btn-secondary">Watch Videos</a>
+    </div>
+    <div class="hero-image">
+        <img src="images/hero.jpg" alt="Health illustration">
+    </div>
+</section>
+
+<!-- BLOG SECTION -->
+<section id="blogs" class="blogs container">
+    <h2>Latest Health Articles</h2>
+    <div class="blog-grid">
+        <article class="blog-card">
+            <img src="images/blog1.jpg" alt="Blog 1">
+            <h3>Understanding Diabetes: Symptoms and Prevention</h3>
+            <p>Learn the early signs of diabetes and how to prevent it effectively.</p>
+            <a href="#" class="btn">Read More</a>
+        </article>
+
+        <article class="blog-card">
+            <img src="images/blog1.jpg" alt="Blog 2">
+            <h3>Healthy Eating Tips for Busy Professionals</h3>
+            <p>Simple and practical tips to maintain a healthy diet despite a busy schedule.</p>
+            <a href="#" class="btn">Read More</a>
+        </article>
+
+        <article class="blog-card">
+            <img src="images/blog1.jpg" alt="Blog 3">
+            <h3>Managing Stress with Mindfulness Techniques</h3>
+            <p>Explore mindfulness practices to reduce stress and improve well-being.</p>
+            <a href="#" class="btn">Read More</a>
+        </article>
+    </div>
+</section>
+
+<!-- YOUTUBE SECTION -->
+<section id="videos" class="videos container">
+    <h2>Watch Our Latest Videos</h2>
+    <div class="video-embed">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed?listType=user_uploads&list=valerius-mh6ux" 
+        title="VoxVita YouTube Channel" frameborder="0" allowfullscreen></iframe>
+    </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="about container">
+    <h2>About VoxVita</h2>
+    <p>VoxVita is dedicated to providing reliable health information and tips for a better life. Our content is sourced from medical experts, textbooks, and latest guidelines to help you make informed decisions.</p>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact container">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container footer-container">
+        <p>&copy; 2025 VoxVita. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://youtube.com/@valerius-mh6ux" target="_blank">YouTube</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
         </div>
-    </section>
+    </div>
+</footer>
 
-    <section class="article-grid-section" id="articles">
-        <div class="container">
-            <h3>አዳዲስ የጤና ጽሑፎች (Recent Health Topics)</h3>
-            <div class="article-grid">
-                <article class="article-card">
-                    <img src="https://images.unsplash.com/photo-1542838132-90145c2657e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MjZ8fG51dHJpdGlvbnxlbnwwfHx8fDE3MDE4ODE2NDZ8MA&ixlib=rb-4.0.3&q=80&w=600" 
-                         alt="Healthy foods for nutrition">
-                    <div class="card-content">
-                        <span class="category">የአመጋገብ ምክር</span>
-                        <h4>ጤናማ ኑሮ ለመኖር 10 ምርጥ ምግቦች</h4>
-                        <p>አጭር ማጠቃለያ፡ የደም ግፊትን ለመቀነስ የሚረዱ ምግቦች እና የአኗኗር ዘይቤ ለውጦች።</p>
-                        <a href="#" class="read-more">ሙሉውን ያንብቡ →</a>
-                    </div>
-                </article>
-
-                <article class="article-card">
-                    <img src="https://images.unsplash.com/photo-1517486801-6a4a0889f417?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MjB8fG1lbnRhbCUyMGhlYWx0aHxlbnwwfHx8fDE3MDE4ODE2NDZ8MA&ixlib=rb-4.0.3&q=80&w=600" 
-                         alt="Mental Health and wellbeing">
-                    <div class="card-content">
-                        <span class="category">አእምሮአዊ ጤና</span>
-                        <h4>የድብርት ምልክቶች እና በቀላሉ መፍትሄዎች</h4>
-                        <p>ጉዳዩን እንዴት መረዳትና መፍታት እንደሚቻል ጠቃሚ የባለሙያ ምክሮች።</p>
-                        <a href="#" class="read-more">ሙሉውን ያንብቡ →</a>
-                    </div>
-                </article>
-                
-                </div>
-        </div>
-    </section>
-
-    <footer class="main-footer">
-        <div class="container">
-            <p>&copy; 2025 VoxVita ጤና. ሁሉም መብቶች የተጠበቁ ናቸው።</p>
-        </div>
-    </footer>
-
-    <script>
-        document.getElementById('theme-toggle').addEventListener('click', function() {
-            const currentTheme = document.body.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            document.body.setAttribute('data-theme', newTheme);
-            this.textContent = newTheme === 'light' ? '🌗 ጨለማ ገጽ' : '☀️ ብሩህ ገጽ';
-        });
-    </script>
+<script src="script.js"></script>
 </body>
 </html>
