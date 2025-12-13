@@ -54,6 +54,7 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 14px;
+  flex-wrap: wrap;
 }
 
 nav ul li a,
@@ -141,11 +142,13 @@ nav ul li button:hover {
 }
 
 /* ================= BLOGS ================= */
-.blogs {
+.blogs, .page-content {
   padding: 80px 0;
+  max-width: 1000px;
+  margin: auto;
 }
 
-.blogs h2 {
+.blogs h2, .page-content h1 {
   text-align: center;
   margin-bottom: 50px;
   font-size: 2rem;
@@ -193,6 +196,22 @@ nav ul li button:hover {
   margin: 0 18px 22px;
 }
 
+/* ================= BLOG PAGE CONTENT ================= */
+.page-content img.blog-image {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.page-content p {
+  margin-bottom: 18px;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.7;
+}
+
 /* ================= VIDEOS ================= */
 .videos {
   padding: 80px 0;
@@ -230,6 +249,7 @@ nav ul li button:hover {
   max-width: 800px;
   font-size: 1.05rem;
   color: #555;
+  margin: auto;
 }
 
 .contact form {
@@ -256,34 +276,12 @@ nav ul li button:hover {
   width: 160px;
 }
 
-/* ================= DISCLAIMER ================= */
-.disclaimer {
-  padding: 50px 0;
-  text-align: center;
-  background: #f9f9f9;
-  border-top: 1px solid #e5e5e5;
-}
-
-.disclaimer h2 {
-  margin-bottom: 15px;
-  font-size: 1.75rem;
-  color: #0a2a66;
-}
-
-.disclaimer p {
-  font-size: 0.95rem;
-  color: #555;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
 /* ================= FOOTER ================= */
 footer {
   background: #f8f9fa;
   padding: 30px 0;
   text-align: center;
   margin-top: 40px;
-  border-top: 1px solid #e5e5e5;
 }
 
 footer p {
@@ -293,22 +291,19 @@ footer p {
 }
 
 .social-links a {
-  margin: 0 10px;
+  margin: 0 8px;
   text-decoration: none;
   font-weight: 600;
   color: #007bff;
-  transition: color 0.3s, text-decoration 0.3s;
 }
 
 .social-links a:hover {
-  color: #0056b3;
   text-decoration: underline;
 }
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
   .hero {
-    flex-direction: column;
     text-align: center;
   }
 
@@ -320,22 +315,13 @@ footer p {
   nav ul {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px;
   }
 
-  .blog-grid {
-    gap: 20px;
+  .blog-card img {
+    height: 160px;
   }
 
-  .videos h2,
-  .blogs h2,
-  .about h2,
-  .contact h2,
-  .disclaimer h2 {
-    font-size: 1.8rem;
-  }
-
-  .contact button {
+  .page-content img.blog-image {
     width: 100%;
   }
 }
