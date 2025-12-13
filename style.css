@@ -54,7 +54,6 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 14px;
-  flex-wrap: wrap;
 }
 
 nav ul li a,
@@ -115,6 +114,7 @@ nav ul li button:hover {
   max-width: 480px;
   width: 100%;
   border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 /* ================= BUTTONS ================= */
@@ -142,13 +142,11 @@ nav ul li button:hover {
 }
 
 /* ================= BLOGS ================= */
-.blogs, .page-content {
+.blogs {
   padding: 80px 0;
-  max-width: 1000px;
-  margin: auto;
 }
 
-.blogs h2, .page-content h1 {
+.blogs h2 {
   text-align: center;
   margin-bottom: 50px;
   font-size: 2rem;
@@ -167,6 +165,8 @@ nav ul li button:hover {
   border-radius: 14px;
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
 }
 
 .blog-card:hover {
@@ -180,36 +180,21 @@ nav ul li button:hover {
   object-fit: cover;
 }
 
+.blog-card .blog-content {
+  padding: 18px;
+  flex: 1;
+}
+
 .blog-card h3 {
   font-size: 1.25rem;
-  margin: 18px 18px 10px;
+  margin-bottom: 10px;
   color: #0a2a66;
 }
 
 .blog-card p {
-  margin: 0 18px 18px;
   font-size: 0.95rem;
+  margin-bottom: 15px;
   color: #555;
-}
-
-.blog-card .btn {
-  margin: 0 18px 22px;
-}
-
-/* ================= BLOG PAGE CONTENT ================= */
-.page-content img.blog-image {
-  display: block;
-  margin: 20px auto;
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.page-content p {
-  margin-bottom: 18px;
-  font-size: 1rem;
-  color: #444;
-  line-height: 1.7;
 }
 
 /* ================= VIDEOS ================= */
@@ -230,6 +215,7 @@ nav ul li button:hover {
   height: 430px;
   border-radius: 14px;
   border: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 /* ================= ABOUT & CONTACT ================= */
@@ -249,7 +235,6 @@ nav ul li button:hover {
   max-width: 800px;
   font-size: 1.05rem;
   color: #555;
-  margin: auto;
 }
 
 .contact form {
@@ -284,6 +269,11 @@ footer {
   margin-top: 40px;
 }
 
+.footer-logo {
+  height: 40px;
+  margin-bottom: 12px;
+}
+
 footer p {
   margin-bottom: 10px;
   font-size: 0.9rem;
@@ -315,13 +305,5 @@ footer p {
   nav ul {
     flex-wrap: wrap;
     justify-content: center;
-  }
-
-  .blog-card img {
-    height: 160px;
-  }
-
-  .page-content img.blog-image {
-    width: 100%;
   }
 }
