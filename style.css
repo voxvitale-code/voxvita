@@ -141,7 +141,7 @@ nav ul li button:hover {
   background: #1e7e34;
 }
 
-/* ================= BLOGS ================= */
+/* ================= BLOGS / ARTICLES ================= */
 .blogs {
   padding: 80px 0;
 }
@@ -180,7 +180,8 @@ nav ul li button:hover {
   object-fit: cover;
 }
 
-.blog-card .blog-content {
+/* Wrap text inside article cards */
+.article-content {
   padding: 18px;
   flex: 1;
 }
@@ -195,6 +196,11 @@ nav ul li button:hover {
   font-size: 0.95rem;
   margin-bottom: 15px;
   color: #555;
+  line-height: 1.5;
+}
+
+.blog-card .btn {
+  margin: 0 18px 22px;
 }
 
 /* ================= VIDEOS ================= */
@@ -305,5 +311,9 @@ footer p {
   nav ul {
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
   }
 }
